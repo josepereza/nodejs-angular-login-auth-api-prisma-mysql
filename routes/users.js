@@ -56,7 +56,7 @@ router.post('/singin', async (req, res, next) => {
 
 })
 
-router.post('/listado', verifyToken, async (req, res) => {
+router.get('/listado', verifyToken, async (req, res) => {
   const allUsers = await prisma.user.findMany();
   console.log(req.data)
   res.send(allUsers)
