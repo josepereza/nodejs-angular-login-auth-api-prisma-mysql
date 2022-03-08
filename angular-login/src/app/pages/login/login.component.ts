@@ -21,7 +21,12 @@ autentificacion(){
   this.authService.login(this.miForm.value)
   .subscribe((data:any)=>{
     this.authService.mitoken=data.token
+    this.authService.usuario=data.user.name
+    console.log(data)
     console.log('es el token',this.authService.mitoken)
+    console.log('es el usuario',this.authService.usuario)
+    this.authService.cambiousuario.next(data.user.name)
+
   })
  
 }
