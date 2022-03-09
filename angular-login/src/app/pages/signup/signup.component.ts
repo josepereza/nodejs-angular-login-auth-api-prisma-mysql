@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-signup',
@@ -6,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
-
-  constructor() { }
+  miForm=this.fb.group({
+    name:[''],
+    email:[''],
+    password:['']
+  })
+  constructor(private fb: FormBuilder, private authService:AuthService) { }
 
   ngOnInit(): void {
   }
-
+crearUsuario(){
+  this.authService.crear(this.miForm.value).subscribe(data=>{
+    console.log(data)
+  })
+}
 }

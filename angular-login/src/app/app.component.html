@@ -9,17 +9,15 @@
 
     <!-- Step 2: Add the ngbCollapse directive to the element below. -->
     <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
-      <ul class="navbar-nav ">
+      <ul class="navbar-nav me-auto ">
 
         <li class="nav-item">
           <a class="nav-link" routerLink="/listado" routerLinkActive="active"
             (click)="isMenuCollapsed = true">Listado</a>
         </li>
 
-
-
-
-        <div class="d-flex"   >
+      </ul>
+      <ul class="navbar-nav ">
           <li *ngIf="usuario" class="nav-item " style="color:aliceblue">
             <a class="nav-link" (click)="isMenuCollapsed = true">Usuario :{{usuario}}</a>
 
@@ -36,7 +34,7 @@
             <a class="nav-link" routerLink="/signup" routerLinkActive="active"
               (click)="isMenuCollapsed = true">singUp</a>
           </li>
-        </div>
+       
 
 
 

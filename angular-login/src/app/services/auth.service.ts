@@ -20,4 +20,7 @@ cambiousuario = new Subject<number>();
   listado(){
     return this.http.get('http://localhost:3000/users/listado')
   }
+  crear(dato:any){
+   return this.http.post('http://localhost:3000/users/singup',dato)
+  }
 }
