@@ -7,12 +7,13 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./listado.component.css']
 })
 export class ListadoComponent implements OnInit {
-
+usuarios:any;
   constructor(private authService:AuthService) { }
 
   ngOnInit(): void {
-    this.authService.listado().subscribe(data=>{
-      console.log(data)
+    this.authService.listado().subscribe((data:any)=>{
+      
+      this.usuarios=data
     })
   }
 
