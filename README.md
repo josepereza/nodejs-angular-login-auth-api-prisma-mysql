@@ -96,7 +96,7 @@ main()
     await prisma.$disconnect()
   })
 ```
-Ejemplo con  nuestro routes/users.js
+Ejemplo con  nuestro routes/users.js   //Este archivo fue creado con nuestro express generate
 ```
 var express = require('express');
 var router = express.Router();
