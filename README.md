@@ -8,7 +8,9 @@ DATABASE_URL="mysql://root:mipassword@localhost:3306/prisma"
 ![image](postman4.png)
 
 # Tutorial para una base de datos mysql ya existente
-origen: https://www.prisma.io/docs/getting-started/setup-prisma/add-to-existing-project/relational-databases-node-mysql
+origen:
+* https://www.prisma.io/docs/getting-started/setup-prisma/add-to-existing-project/relational-databases-node-mysql
+* https://www.prisma.io/express
 ## backend
 ```
 npx express-generator --view=ejs
