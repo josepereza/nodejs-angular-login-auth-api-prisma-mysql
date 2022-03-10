@@ -55,7 +55,7 @@ DATABASE: The name of the database
 As an example, for a MySQL database hosted on AWS RDS, the connection URL might look similar to this:
 
 .env
-`` 
+```
 DATABASE_URL="mysql://johndoe:XXX@mysql–instance1.123456789012.us-east-1.rds.amazonaws.com:3306/mydb"
 ```
 When running MySQL locally, your connection URL typically looks similar to this:
