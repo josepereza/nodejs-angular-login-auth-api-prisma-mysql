@@ -42,7 +42,7 @@ DATABASE_URL="mysql://johndoe:randompassword@localhost:3306/mydb"
 You now need to adjust the connection URL to point to your own database.
 
 The format of the connection URL for your database typically depends on the database you use. For MySQL, it looks as follows (the parts spelled all-uppercased are placeholders for your specific connection details):
-`` 
+```
 mysql://USER:PASSWORD@HOST:PORT/DATABASE 
 ```
 Here's a short explanation of each component:
