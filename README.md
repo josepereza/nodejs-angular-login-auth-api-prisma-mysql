@@ -46,11 +46,12 @@ The format of the connection URL for your database typically depends on the data
 mysql://USER:PASSWORD@HOST:PORT/DATABASE 
 ```
 Here's a short explanation of each component:
-
+```
 USER: The name of your database user
 PASSWORD: The password for your database user
 PORT: The port where your database server is running (typically 3306 for MySQL)
 DATABASE: The name of the database
+```
 As an example, for a MySQL database hosted on AWS RDS, the connection URL might look similar to this:
 
 .env
