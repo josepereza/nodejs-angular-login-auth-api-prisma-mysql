@@ -96,3 +96,33 @@ main()
     await prisma.$disconnect()
   })
 ```
+Ejemplo con  nuestro routes/users.js
+```
+var express = require('express');
+var router = express.Router();
+const { PrismaClient } = require('@prisma/client')
+
+const prisma = new PrismaClient()
+
+async function main() {
+  // ... you will write your Prisma Client queries here
+  const  datos= await prisma.user.findMany()
+  console.log(datos)
+}
+
+
+/* GET users listing. */
+router.get('/', function(req, res, next) {
+  main()
+  .catch((e) => {
+    throw e
+  })
+  .finally(async () => {
+    await prisma.$disconnect()
+  })
+  res.send('respond with a resource');
+});
+
+module.exports = router;
+
+```
